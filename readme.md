@@ -16,6 +16,5 @@ This is a Kimball style star schema tracking the purchase of items across a vari
 For the future this database can be upgraded in the following ways:
 - add unique user ids for customers, items, and locations
 - create sample data injection python files using `UPDATE TABLE` statements
-- create foreign key constraints in the `CREATE TABLE` statements
 - index tables for better performance in the future
 - 
