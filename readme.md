@@ -1,9 +1,9 @@
 # Sample DB
 This is a repo for a sample database that can be used for other projects. 
 It uses [duckdb](https://duckdb.org/) which is a light approach to create a database locally.
+It also has version controllable approach from which a user can create an entire db with python,
+instead of having decontextualized `.sql` files floating in a repo.
 
-
-Using a `.csv` file was getting old and does not reflect some of the complexity of data ingestion in the real world.
 
 ## General Idea
 
@@ -15,6 +15,10 @@ This is a Kimball style star schema tracking the purchase of items across a vari
 
 For the future this database can be upgraded in the following ways:
 - add unique user ids for customers, items, and locations
-- create sample data injection python files using `UPDATE TABLE` statements
-- index tables for better performance in the future
-- 
+- create dim_items
+- create dim_locations
+- create fct_purchases
+- Test dim_persons injection
+- Create dim_items injection
+- create dim_locations injection
+- create fct_purchases injection
