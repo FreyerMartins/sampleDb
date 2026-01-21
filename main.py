@@ -1,22 +1,18 @@
-import faker
-fake = faker.Faker()
+from src.queries import get_customer_create_query
+from src.functions import generate_person
 
-seed = 134
 
-def generate_person(seed):
-    person = {
-        'name': fake.name(),
-        'city': fake.city(),
-        'state': fake.state(),
-        'zip_code': fake.zipcode(),
-        'country': fake.country(),
-        'email': fake.email(),
-        'job': fake.job(),
-        'company': fake.company(),
-        'ssn': fake.ssn(),
-        'birthdate': fake.date_of_birth(),
-        'phone_number': fake.phone_number()
-    }
-    return person
+import pandas as pd
+import duckdb
 
-print(generate_person(seed))
+seed = 69
+
+con = duckdb.connect("sampling_database.db")
+
+person = generate_person(seed)
+print(person)
+
+create_dim_customer_table = get_customer_create_query()
+con.sql(create_dim_customer_table)
+
+con.close()
