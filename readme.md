@@ -15,10 +15,10 @@ This is a Kimball style star schema tracking the purchase of items across a vari
 
 For the future this database can be upgraded in the following ways:
 - add unique user ids for customers, items, and locations
-- create dim_items
 - create dim_locations
 - create fct_purchases
 - Test dim_persons injection
+- Test dim_items creation
 - Create dim_items injection
-- create dim_locations injection
-- create fct_purchases injection
+- create dim_locations injection (use a JSON format for variety)
+- create fct_purchases injection (manual or another CSV/JSON)
