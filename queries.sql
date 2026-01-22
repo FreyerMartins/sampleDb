@@ -16,18 +16,6 @@ CREATE TABLE dim_customers (
     createDate TIMESTAMP NOT NULL
 );
 
-'name': fake.name(),
-        'city': fake.city(),
-        'state': fake.state(),
-        'zip_code': fake.zipcode(),
-        'country': fake.country(),
-        'email': fake.email(),
-        'job': fake.job(),
-        'company': fake.company(),
-        'ssn': fake.ssn(),
-        'birthdate': fake.date_of_birth(),
-        'phone_number': fake.phone_number()
-
 create table dim_items (
 	id INTEGER PRIMARY KEY,
 	itemID INTEGER NOT NULL,

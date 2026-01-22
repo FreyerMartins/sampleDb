@@ -1,4 +1,4 @@
-def get_customer_create_query():
+def create_customer_query():
     query = ('CREATE TABLE dim_customers ('
              'id INTEGER PRIMARY KEY,'
              'customerID INTEGER NOT NULL,'
@@ -15,3 +15,12 @@ def get_customer_create_query():
              'createDate TIMESTAMP NOT NULL'
              ');')
     return query
+
+def create_item_query():
+    query = ('CREATE TABLE dim_items ('
+             'itemID INTEGER PRIMARY KEY,'
+             'itemName VARCHAR(255) NOT NULL,'
+             'currentItemPrice FLOAT NOT NULL,'
+             'createDate TIMESTAMP NOT NULL,'
+             'updateDate TIMESTAMP NOT NULL'
+             ');')

@@ -5,7 +5,7 @@ It also has version controllable approach from which a user can create an entire
 instead of having decontextualized `.sql` files floating in a repo.
 
 
-## General Idea
+## The General Idea
 
 ![a relational diagram of the database](images/db_diagram.png)
 
